@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Технологична Еволюция | Начало</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        /* Персонализирани анимации */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Персонализиран градиент */
+        .tech-gradient {
+            background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+        }
+
+        /* Ефект при посочване на карти */
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Плавни преходи */
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        /* Стил за активен навигационен линк (може да го персонализирате) */
+        .nav-link.active {
+            font-weight: bold;
+            /* border-bottom: 2px solid white; */ /* Примерно подчертаване */
+            color: #e0f2fe; /* По-светъл цвят за активен линк */
+        }
+        .page.active {
+            display: block; /* Ensure active pages are block, Tailwind's hidden is display:none */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Навигация -->
+    <nav class="tech-gradient text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div href="#home" class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-microchip text-2xl"></i>
+                    <span class="font-semibold text-xl">Технологична Еволюция</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link active">Начало</a>
+                    <a href="#history" class="nav-link">История</a>
+                    <a href="#generations" class="nav-link">Поколения</a>
+                    <a href="#bulgaria" class="nav-link">България</a>
+                    <a href="#cpu" class="nav-link">Процесор</a>
+                    <a href="#ram" class="nav-link">RAM</a>
+                    <a href="#peripherals" class="nav-link">Периферия</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Мобилно меню -->
+        <div class="mobile-menu hidden md:hidden bg-blue-700">
+            <div class="container mx-auto px-6 py-3 flex flex-col space-y-4">
+                <a href="#home" class="nav-link active">Начало</a>
+                <a href="#history" class="nav-link">История</a>
+                <a href="#generations" class="nav-link">Поколения</a>
+                <a href="#bulgaria" class="nav-link">България</a>
+                <a href="#cpu" class="nav-link">Процесор</a>
+                <a href="#ram" class="nav-link">RAM</a>
+                <a href="#peripherals" class="nav-link">Периферия</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основно съдържание -->
+    <div class="content-area">
+        <!-- Начална страница -->
+        <section id="home" class="page active py-16">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Разгледайте Еволюцията на Компютрите</h1>
+                        <p class="text-lg text-gray-600 mb-8">От механичните калкулатори до съвременните квантови компютри, открийте забележителното пътешествие на компютърните технологии и тяхното влияние върху нашия свят.</p>
+                        <div class="flex space-x-4">
+                            <a href="#history" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all">Започнете</a>
+                            <a href="#generations" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-all">Поколения</a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Компютърни технологии"
+                             class="rounded-xl shadow-xl floating max-w-full h-auto">
+                    </div>
+                </div>
+
+                <div class="mt-24">
+                    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Разгледайте Нашите Теми</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Тема 1 -->
+                        <div class="tech-card bg-white rounded-xl shadow-md overflow-hidden transition-all">
+                            <div class="tech-gradient h-2"></div>
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-history text-blue-600"></i>
+                                    </div>
+                                    <h3 class="text-xl font-semibold text-gray-800">История на Компютрите</h3>
+                                </div>
+                                <p class="text-gray-600 mb-4">Проследете произхода на компютрите от древните абакуси до съвременните суперкомпютри и разберете как всяка иновация е надграждала предходната.</p>
+                                <a href="#history" class="text-blue-600 font-medium hover:text-blue-800">Научете повече →</a>
+                            </div>
+                        </div>
+
+                        <!-- Тема 2 -->
+                        <div class="tech-card bg-white rounded-xl shadow-md overflow-hidden transition-all">
+                            <div class="tech-gradient h-2"></div>
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-microchip text-blue-600"></i>
+                                    </div>
+                                    <h3 class="text-xl font-semibold text-gray-800">Поколения Компютри</h3>
+                                </div>
+                                <p class="text-gray-600 mb-4">Разгледайте петте поколения компютри, от вакуумните тръби до изкуствения интелект, и вижте как технологиите бързо са се развили.</p>
+                                <a href="#generations" class="text-blue-600 font-medium hover:text-blue-800">Научете повече →</a>
+                            </div>
+                        </div>
+
+                        <!-- Тема 3 -->
+                        <div class="tech-card bg-white rounded-xl shadow-md overflow-hidden transition-all">
+                            <div class="tech-gradient h-2"></div>
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-globe-europe text-blue-600"></i>
+                                    </div>
+                                    <h3 class="text-xl font-semibold text-gray-800">Български Технологии</h3>
+                                </div>
+                                <p class="text-gray-600 mb-4">Открийте приноса на България в компютърните технологии, от ранното компютърно производство до съвременния софтуерен развой.</p>
+                                <a href="#bulgaria" class="text-blue-600 font-medium hover:text-blue-800">Научете повече →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- История на компютърните технологии -->
+        <section id="history" class="page hidden py-16">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center mb-16">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <h1 class="text-4xl font-bold text-gray-800 mb-6">История на Компютърните Технологии</h1>
+                        <p class="text-lg text-gray-600">Историята на компютрите обхваща векове, като всяка епоха надгражда върху иновациите на предходната. От прости инструменти за броене до сложен изкуствен интелект, пътешествието на компютърните технологии отразява неуморното преследване на човечеството към знание и ефективност.</p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                             alt="Исторически компютри"
+                             class="rounded-xl shadow-xl max-w-full h-auto">
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
+                    <div class="tech-gradient h-2"></div>
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Ключови Етапи в Историята на Компютрите</h2>
+
+                        <div class="space-y-8">
+                            <!-- Етап 1 -->
+                            <div class="flex flex-col md:flex-row">
+                                <div class="md:w-1/4 mb-4 md:mb-0">
+                                    <div class="bg-blue-100 text-blue-800 font-semibold px-4 py-2 rounded-lg inline-block">2400 пр.н.е.</div>
+                                </div>
+                                <div class="md:w-3/4">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Абакусът</h3>
+                                    <p class="text-gray-600">Най-ранният известен инструмент за изчисления, абакусът, се е използвал в древен Месопотамия, Египет, а по-късно в Китай и Гърция. Това просто устройство позволява основни аритметични операции.</p>
+                                </div>
+                            </div>
+
+                            <!-- Етап 2 -->
+                            <div class="flex flex-col md:flex-row">
+                                <div class="md:w-1/4 mb-4 md:mb-0">
+                                    <div class="bg-blue-100 text-blue-800 font-semibold px-4 py-2 rounded-lg inline-block">1822</div>
+                                </div>
+                                <div class="md:w-3/4">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Разностна Машина</h3>
+                                    <p class="text-gray-600">Чарлз Бабидж проектира Разностната машина, автоматичен механичен калкулатор, предназначен за таблично представяне на полиномни функции. Въпреки че не е завършен приживе, той поставя основите на съвременните компютри.</p>
+                                </div>
+                            </div>
+
+                            <!-- Етап 3 -->
+                            <div class="flex flex-col md:flex-row">
+                                <div class="md:w-1/4 mb-4 md:mb-0">
+                                    <div class="bg-blue-100 text-blue-800 font-semibold px-4 py-2 rounded-lg inline-block">1936</div>
+                                </div>
+                                <div class="md:w-3/4">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Машина на Тюринг</h3>
+                                    <p class="text-gray-600">Алън Тюринг предлага концепцията за универсална машина (Машина на Тюринг), която може да изчислява всичко изчислимо, поставяйки теоретичните основи на съвременното изчисление.</p>
+                                </div>
+                            </div>
+
+                            <!-- Етап 4 -->
+                            <div class="flex flex-col md:flex-row">
+                                <div class="md:w-1/4 mb-4 md:mb-0">
+                                    <div class="bg-blue-100 text-blue-800 font-semibold px-4 py-2 rounded-lg inline-block">1946</div>
+                                </div>
+                                <div class="md:w-3/4">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">ENIAC</h3>
+                                    <p class="text-gray-600">Електронният числов интегратор и компютър (ENIAC) е първият компютър с общо предназначение, използващ вакуумни тръби вместо механични превключватели.</p>
+                                </div>
+                            </div>
+
+                            <!-- Етап 5 -->
+                            <div class="flex flex-col md:flex-row">
+                                <div class="md:w-1/4 mb-4 md:mb-0">
+                                    <div class="bg-blue-100 text-blue-800 font-semibold px-4 py-2 rounded-lg inline-block">1971</div>
+                                </div>
+                                <div class="md:w-3/4">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Микропроцесор</h3>
+                                    <p class="text-gray-600">Intel представя 4004, първият търговски достъпен микропроцесор, който събира всички компоненти на централния процесор на компютър върху един чип.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#home" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all inline-block">Обратно към Началото</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Поколения компютри -->
+        <section id="generations" class="page hidden py-16">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">Поколения Компютри</h1>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+                    <!-- Поколение 1 -->
+                    <div class="tech-card bg-white rounded-xl shadow-md overflow-hidden transition-all">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="text-center mb-4">
+                                <div class="bg-blue-100 p-4 rounded-full inline-block">
+                                    <i class="fas fa-plug text-blue-600 text-2xl"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-semibold text-center text-gray-800 mb-2">Първо Поколение (1940-1956)</h3>
+                            <p class="text-gray-600 text-sm">Компютри с вакуумни тръби, които са били огромни по размер, консумират голямо количество енергия и генерират значително топло.</p>
+                            <div class="mt-4 text-blue-600 text-sm font-medium">
+                                Примери: ENIAC, UNIVAC
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Поколение 2 -->
+                    <div class="tech-card bg-white rounded-xl shadow-md overflow-hidden transition-all">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="text-center mb-4">
+                                <div class="bg-blue-100 p-4 rounded-full inline-block">
+                                    <i class="fas fa-exchange-alt text-blue-600 text-2xl"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-semibold text-center text-gray-800 mb-2">Второ Поколение (1956-1963)</h3>
+                            <p class="text-gray-600 text-sm">Компютри с транзистори, които са по-малки, по-бързи, по-надеждни и енергийно ефективни от вакуумните тръби.</p>
+                            <div class="mt-4 text-blue-600 text-sm font-medium">
+                                Примери: IBM 1401, UNIVAC 1107
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Поколение 3 -->
+                    <div class="tech-card bg-white rounded-xl shadow-md overflow-hidden transition-all">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="text-center mb-4">
+                                <div class="bg-blue-100 p-4 rounded-full inline-block">
+                                    <i class="fas fa-microchip text-blue-600 text-2xl"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-semibold text-center text-gray-800 mb-2">Трето Поколение (1964-1971)</h3>
+                            <p class="text-gray-600 text-sm">Компютри с интегрални схеми, които са по-малки, по-евтини и по-мощни от своите предшественици.</p>
+                            <div class="mt-4 text-blue-600 text-sm font-medium">
+                                Примери: IBM System/360, PDP-8
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Поколение 4 -->
+                    <div class="tech-card bg-white rounded-xl shadow-md overflow-hidden transition-all">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="text-center mb-4">
+                                <div class="bg-blue-100 p-4 rounded-full inline-block">
+                                    <i class="fas fa-laptop text-blue-600 text-2xl"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-semibold text-center text-gray-800 mb-2">Четвърто Поколение (1971-Днес)</h3>
+                            <p class="text-gray-600 text-sm">Компютри с микропроцесори, които донесоха персоналното изчисление в домовете и бизнеса по целия свят.</p>
+                            <div class="mt-4 text-blue-600 text-sm font-medium">
+                                Примери: Apple II, IBM PC
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Поколение 5 -->
+                    <div class="tech-card bg-white rounded-xl shadow-md overflow-hidden transition-all">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="text-center mb-4">
+                                <div class="bg-blue-100 p-4 rounded-full inline-block">
+                                    <i class="fas fa-brain text-blue-600 text-2xl"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-semibold text-center text-gray-800 mb-2">Пето Поколение (Днес-Бъдеще)</h3>
+                            <p class="text-gray-600 text-sm">Компютри, базирани на изкуствен интелект, фокусирани върху квантови изчисления и паралелна обработка.</p>
+                            <div class="mt-4 text-blue-600 text-sm font-medium">
+                                Примери: IBM Watson, Квантови Компютри
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
+                    <div class="tech-gradient h-2"></div>
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Сравнение на Компютърните Поколения</h2>
+
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white">
+                                <thead>
+                                    <tr class="tech-gradient text-white">
+                                        <th class="py-3 px-4 text-left">Поколение</th>
+                                        <th class="py-3 px-4 text-left">Технология</th>
+                                        <th class="py-3 px-4 text-left">Размер</th>
+                                        <th class="py-3 px-4 text-left">Скорост</th>
+                                        <th class="py-3 px-4 text-left">Програмиране</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="py-3 px-4">1во</td>
+                                        <td class="py-3 px-4">Вакуумни Тръби</td>
+                                        <td class="py-3 px-4">Големина на стая</td>
+                                        <td class="py-3 px-4">Милисекунди</td>
+                                        <td class="py-3 px-4">Машинен Език</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="py-3 px-4">2ро</td>
+                                        <td class="py-3 px-4">Транзистори</td>
+                                        <td class="py-3 px-4">Големина на шкаф</td>
+                                        <td class="py-3 px-4">Микросекунди</td>
+                                        <td class="py-3 px-4">Асемблерен Език</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">3то</td>
+                                        <td class="py-3 px-4">Интегрални Схеми</td>
+                                        <td class="py-3 px-4">Големина на бюро</td>
+                                        <td class="py-3 px-4">Наносекунди</td>
+                                        <td class="py-3 px-4">Високо Ниво</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="py-3 px-4">4то</td>
+                                        <td class="py-3 px-4">Микропроцесори</td>
+                                        <td class="py-3 px-4">Лаптоп до Десктоп</td>
+                                        <td class="py-3 px-4">Пикосекунди</td>
+                                        <td class="py-3 px-4">Обектно-Ориентирано</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4">5то</td>
+                                        <td class="py-3 px-4">ИИ & Квантови</td>
+                                        <td class="py-3 px-4">Длан до Облак</td>
+                                        <td class="py-3 px-4">Над Класическото</td>
+                                        <td class="py-3 px-4">Естествен Език</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#home" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all inline-block">Обратно към Началото</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Компютърни технологии в България -->
+        <section id="bulgaria" class="page hidden py-16">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center mb-16">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <h1 class="text-4xl font-bold text-gray-800 mb-6">Компютърни Технологии в България</h1>
+                        <p class="text-lg text-gray-600">България има богата история в компютърните технологии, от лидер в производството на компютри в Източния блок до център за съвременен софтуерен развой и ИТ аутсорсинг. Страната е произвела значителни иновации и продължава да бъде важен играч в европейската технологична сцена.</p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Български технологии"
+                             class="rounded-xl shadow-xl max-w-full h-auto">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <!-- Българска компютърна индустрия -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-industry text-blue-600"></i>
+                                </div>
+                                <h2 class="text-2xl font-semibold text-gray-800">Българска Компютърна Индустрия</h2>
+                            </div>
+                            <p class="text-gray-600 mb-4">По време на комунистическата ера България е била голям производител на компютри в Източния блок, произвеждайки клонинги на западни системи като IBM PC и разработвайки оригинални дизайни.</p>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                                <li><strong>Компютри Правец</strong> - Най-известната българска компютърна серия, с над 500 000 произведени единици</li>
+                                <li><strong>ИМКО</strong> - Български клонинг на компютъра Apple II</li>
+                                <li><strong>Серия ЕС</strong> - Мейнфрейм компютри, съвместими с IBM System/360</li>
+                                <li><strong>ЕЛКА</strong> - Български калкулатори и ранни персонални компютри</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Съвременен технологичен сектор -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-code text-blue-600"></i>
+                                </div>
+                                <h2 class="text-2xl font-semibold text-gray-800">Съвременен Технологичен Сектор</h2>
+                            </div>
+                            <p class="text-gray-600 mb-4">Днес България има процъфтяващ ИТ сектор със силни страни в софтуерното разработване, аутсорсинга и стартъп иновациите. София се превръща в един от изгряващите технологични центрове в Европа.</p>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                                <li><strong>Софтуерно Разработване</strong> - България е сред топ дестинациите за аутсорсинг с висококвалифицирани разработчици</li>
+                                <li><strong>Стартъп Екосистема</strong> - Нарастващ брой успешни технологични стартъпи като Telerik (придобит от Progress)</li>
+                                <li><strong>Гейм Индустрия</strong> - Няколко успешни студия за разработка на игри като Haemimont Games</li>
+                                <li><strong>Блокчейн</strong> - България се утвърждава като блокчейн и крипто център в Източна Европа</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
+                    <div class="tech-gradient h-2"></div>
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Значими Български Технологични Постижения</h2>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Постижение 1 -->
+                            <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                                <div class="text-blue-600 text-3xl mb-4">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Правец 8D</h3>
+                                <p class="text-gray-600">Един от най-напредналите български компютри, 8-битова машина, широко използвана в училища и предприятия през 80-те години.</p>
+                            </div>
+
+                            <!-- Постижение 2 -->
+                            <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                                <div class="text-blue-600 text-3xl mb-4">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Telerik</h3>
+                                <p class="text-gray-600">Българска софтуерна компания, известна с инструментите си за .NET разработка, придобита от Progress Software през 2014 г. за 262,5 млн. долара.</p>
+                            </div>
+
+                            <!-- Постижение 3 -->
+                            <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                                <div class="text-blue-600 text-3xl mb-4">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Серия Tropico</h3>
+                                <p class="text-gray-600">Популярна серия градостроителни игри, разработена от българското студио Haemimont Games, с над 5 милиона продадени копия по целия свят.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#home" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all inline-block">Обратно към Началото</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Централен процесор -->
+        <section id="cpu" class="page hidden py-16">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center mb-16">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <h1 class="text-4xl font-bold text-gray-800 mb-6">Централен Процесор (CPU)</h1>
+                        <p class="text-lg text-gray-600">CPU е мозъкът на компютъра, отговорен за изпълнението на инструкциите на компютърна програма. Той изпълнява основни аритметични, логически, управляващи и входно/изходни операции, определени от инструкциите, което го прави най-важният компонент във всяко изчислително устройство.</p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2023/11/1413018-am5-ryzen-1260x709-transformed.jpg"
+                             alt="CPU"
+                             class="rounded-xl shadow-xl max-w-full h-auto">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <!-- Функционалност на CPU -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-cogs text-blue-600"></i>
+                                </div>
+                                <h2 class="text-xl font-semibold text-gray-800">Функционалност на CPU</h2>
+                            </div>
+                            <p class="text-gray-600">CPU изпълнява всяка инструкция на програмата в последователност, извършвайки основните аритметични, логически и входно/изходни операции на системата.</p>
+                            <div class="mt-4">
+                                <div class="flex items-center mb-2">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                                    <span class="text-sm text-gray-600">Извличане - получава инструкцията от паметта</span>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                                    <span class="text-sm text-gray-600">Декодиране - интерпретира инструкцията</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                                    <span class="text-sm text-gray-600">Изпълнение - извършва операцията</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Компоненти на CPU -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-puzzle-piece text-blue-600"></i>
+                                </div>
+                                <h2 class="text-xl font-semibold text-gray-800">Компоненти на CPU</h2>
+                            </div>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                                <li><strong>Контролно Устройство (CU)</strong> - Управлява работата на процесора</li>
+                                <li><strong>Аритметично-Логическо Устройство (ALU)</strong> - Извършва аритметични и логически операции</li>
+                                <li><strong>Регистри</strong> - Малки хранилища, които временно съхраняват данни</li>
+                                <li><strong>Кеш</strong> - Малка, бърза памет, която съхранява често използвани данни</li>
+                                <li><strong>Тактов Генератор</strong> - Синхронизира всички CPU операции</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Производителност на CPU -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-tachometer-alt text-blue-600"></i>
+                                </div>
+                                <h2 class="text-xl font-semibold text-gray-800">Производителност на CPU</h2>
+                            </div>
+                            <p class="text-gray-600 mb-2">Няколко фактора влияят на производителността на CPU:</p>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-clock text-blue-600 mr-2"></i>
+                                    <span class="text-sm text-gray-600"><strong>Тактова Честота:</strong> Измерва се в GHz, броя цикли в секунда</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-layer-group text-blue-600 mr-2"></i>
+                                    <span class="text-sm text-gray-600"><strong>Ядра:</strong> Повече ядра позволяват паралелна обработка</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-memory text-blue-600 mr-2"></i>
+                                    <span class="text-sm text-gray-600"><strong>Размер на Кеша:</strong> По-голям кеш намалява времето за достъп до памет</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-microchip text-blue-600 mr-2"></i>
+                                    <span class="text-sm text-gray-600"><strong>Архитектура:</strong> По-новите дизайни са по-ефективни</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
+                    <div class="tech-gradient h-2"></div>
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Еволюция на CPU Технологиите</h2>
+
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                            <!-- Ера 1 -->
+                            <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                                <div class="text-blue-600 text-3xl mb-4">
+                                    <i class="fas fa-plug"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Вакуумни Тръби</h3>
+                                <p class="text-gray-600 text-sm">1940-1950: Големи, ненадеждни, консумират значителна мощност (ENIAC, UNIVAC)</p>
+                            </div>
+
+                            <!-- Ера 2 -->
+                            <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                                <div class="text-blue-600 text-3xl mb-4">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Транзистори</h3>
+                                <p class="text-gray-600 text-sm">1950-1960: По-малки, по-надеждни, по-малко мощност (IBM 1401, DEC PDP-1)</p>
+                            </div>
+
+                            <!-- Ера 3 -->
+                            <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                                <div class="text-blue-600 text-3xl mb-4">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Интегрални Схеми</h3>
+                                <p class="text-gray-600 text-sm">1960-1970: Множество транзистори на чип (Intel 4004, IBM System/360)</p>
+                            </div>
+
+                            <!-- Ера 4 -->
+                            <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                                <div class="text-blue-600 text-3xl mb-4">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Микропроцесори</h3>
+                                <p class="text-gray-600 text-sm">1970-Днес: Цял CPU на чип (Intel, AMD, ARM, многоядрени процесори)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#home" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all inline-block">Обратно към Началото</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- RAM памет -->
+        <section id="ram" class="page hidden py-16">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center mb-16">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <h1 class="text-4xl font-bold text-gray-800 mb-6">Оперативна Памет (RAM)</h1>
+                        <p class="text-lg text-gray-600">RAM е форма на компютърна памет, която може да бъде четена и променяна във всякакъв ред, обикновено използвана за съхраняване на работни данни и машинен код. Тя позволява елементите от данни да бъдат четени или записвани за почти същото време, независимо от физическото местоположение на данните в паметта, което я прави критична за производителността на системата.</p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="https://www.avg.com/hs-fs/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/what_is_ram_memory_signal_refresh/img_01.jpg?width=1240&name=img_01.jpg"
+                             alt="RAM"
+                             class="rounded-xl shadow-xl max-w-full h-auto">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <!-- Основи на RAM -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-memory text-blue-600"></i>
+                                </div>
+                                <h2 class="text-xl font-semibold text-gray-800">Основи на RAM</h2>
+                            </div>
+                            <p class="text-gray-600 mb-4">RAM е летлива памет, което означава, че губи съдържанието си при изключване на захранването. Тя служи като "работна" памет на компютъра, където активните програми и данни се съхраняват за бърз достъп от CPU.</p>
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 p-1 rounded-full mr-3 mt-1">
+                                        <i class="fas fa-bolt text-blue-600 text-xs"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600"><strong>Скорост:</strong> Много по-бърза от устройствата за съхранение (SSD/HDD)</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 p-1 rounded-full mr-3 mt-1">
+                                        <i class="fas fa-times text-blue-600 text-xs"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600"><strong>Летливост:</strong> Временно съхранение, което се изчиства при изключване</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 p-1 rounded-full mr-3 mt-1">
+                                        <i class="fas fa-random text-blue-600 text-xs"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600"><strong>Достъп:</strong> Всеки байт може да бъде достъпен без да се докосват предходните байтове</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Видове RAM -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-layer-group text-blue-600"></i>
+                                </div>
+                                <h2 class="text-xl font-semibold text-gray-800">Видове RAM</h2>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <h3 class="font-semibold text-gray-800 mb-1">DRAM (Динамична RAM)</h3>
+                                    <p class="text-gray-600 text-sm">Използва кондензатори, които трябва да се обновяват периодично. По-бавна, но по-евтина и използвана за основна системна памет.</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800 mb-1">SRAM (Статична RAM)</h3>
+                                    <p class="text-gray-600 text-sm">По-бърза и по-скъпа, не се нуждае от обновяване. Използва се за CPU кеш.</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800 mb-1">SDRAM (Синхронна DRAM)</h3>
+                                    <p class="text-gray-600 text-sm">Синхронизирана с системния часовник. Включва DDR, DDR2, DDR3, DDR4, DDR5 поколения.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
+                    <div class="tech-gradient h-2"></div>
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Спецификации и Производителност на RAM</h2>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Спецификация 1 -->
+                            <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                                <div class="text-blue-600 text-3xl mb-4">
+                                    <i class="fas fa-sd-card"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Капацитет</h3>
+                                <p class="text-gray-600">Измерва се в GB, определя колко данни могат да се съхраняват за активно използване. Съвременните системи обикновено имат 8GB-128GB RAM.</p>
+                            </div>
+
+                            <!-- Спецификация 2 -->
+                            <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                                <div class="text-blue-600 text-3xl mb-4">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Скорост</h3>
+                                <p class="text-gray-600">Измерва се в MHz (DDR4 обикновено 2133-3200MHz, DDR5 4800-6400MHz). По-високи скорости позволяват по-бърз трансфер на данни.</p>
+                            </div>
+
+                            <!-- Спецификация 3 -->
+                            <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                                <div class="text-blue-600 text-3xl mb-4">
+                                    <i class="fas fa-stopwatch"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Закъснение</h3>
+                                <p class="text-gray-600">CL (CAS Latency) тайминги измерват забавянето между команда и наличност на данни. По-ниски числа са по-добри.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Как RAM Влияе на Производителността</h3>
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                                    <li><strong>Мултитаскинг:</strong> Повече RAM позволява повече приложения да работят едновременно без забавяне</li>
+                                    <li><strong>Големи Приложения:</strong> Програми, интензивни към паметта (видео редакция, 3D рендиране) се възползват от повече RAM</li>
+                                    <li><strong>Игри:</strong> Съвременните игри изискват значителна RAM за текстури и асети</li>
+                                    <li><strong>Виртуални Машини:</strong> Всяка VM изисква отделно разпределение на RAM</li>
+                                    <li><strong>Операционна Система:</strong> Самата ОС консумира RAM за своите операции</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#home" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all inline-block">Обратно към Началото</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Периферни устройства -->
+        <section id="peripherals" class="page hidden py-16">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">Периферни Устройства</h1>
+
+                <div class="flex flex-col md:flex-row items-center mb-16">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <p class="text-lg text-gray-600 mb-6">Периферните устройства са спомагателни устройства, които се свързват и работят с компютър, за да въвеждат информация в него или да извеждат информация от него. Те разширяват възможностите на компютъра и позволяват на потребителите да взаимодействат със системата.</p>
+                        <p class="text-lg text-gray-600">Периферията може да бъде категоризирана във входни устройства (изпращат данни към компютъра), изходни устройства (получават данни от компютъра) и устройства за съхранение (и вход, и изход). Някои съвременни устройства комбинират множество функции.</p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="https://cdn.prod.website-files.com/654c1a21d7927473aecf5875/65bd86cb4bc6dc3a23fcfdff_10602-9535.jpeg"
+                             alt="Компютърна периферия"
+                             class="rounded-xl shadow-xl max-w-full h-auto">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <!-- Входни устройства -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-keyboard text-blue-600"></i>
+                                </div>
+                                <h2 class="text-xl font-semibold text-gray-800">Входни Устройства</h2>
+                            </div>
+                            <p class="text-gray-600 mb-4">Тези устройства позволяват на потребителите да въвеждат данни и команди в компютърната система.</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-mouse text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Мишка</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-keyboard text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Клавиатура</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-camera text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Скенер</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-microphone text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Микрофон</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-gamepad text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Гейм Контролер</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-fingerprint text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Биометричен Скенер</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-tablet-alt text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Графичен Таблет</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-barcode text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Баркод Четец</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Изходни устройства -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-tv text-blue-600"></i>
+                                </div>
+                                <h2 class="text-xl font-semibold text-gray-800">Изходни Устройства</h2>
+                            </div>
+                            <p class="text-gray-600 mb-4">Тези устройства показват или по друг начин представят данни от компютъра към потребителя.</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-desktop text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Монитор</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-print text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Принтер</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-headphones text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Слушалки</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-volume-up text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Високоговорители</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-projector text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Проектор</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-braille text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Брайлов Четец</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-plug text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">3D Принтер</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-lightbulb text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">LED Индикатори</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <!-- Устройства за съхранение -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-hdd text-blue-600"></i>
+                                </div>
+                                <h2 class="text-xl font-semibold text-gray-800">Устройства за Съхранение</h2>
+                            </div>
+                            <p class="text-gray-600 mb-4">Тези устройства съхраняват данни постоянно и могат както да получават данни от компютъра, така и да изпращат данни към него.</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-hdd text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Твърд Диск</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-compact-disc text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">SSD</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-usb text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Флаш Диск</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-sd-card text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Паметна Карта</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-compact-disc text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">CD/DVD/Blu-ray</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-network-wired text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">NAS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Комуникационни устройства -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="tech-gradient h-2"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-wifi text-blue-600"></i>
+                                </div>
+                                <h2 class="text-xl font-semibold text-gray-800">Комуникационни Устройства</h2>
+                            </div>
+                            <p class="text-gray-600 mb-4">Тези устройства позволяват на компютрите да се свързват и комуникират с други системи.</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-network-wired text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Мрежова Карта</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-wifi text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Wi-Fi Адаптер</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-bluetooth text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Bluetooth Донгъл</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-satellite-dish text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Модем</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-ethernet text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Рутер</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-sim-card text-blue-600 mr-2"></i>
+                                    <span class="text-gray-600">Мобилен Брандбан</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
+                    <div class="tech-gradient h-2"></div>
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Съвременни Периферни Технологии</h2>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Технология 1 -->
+                            <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                                <div class="text-blue-600 text-3xl mb-4">
+                                    <i class="fas fa-vr-cardboard"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">VR Главини</h3>
+                                <p class="text-gray-600">Устройства за виртуална реалност като Oculus Rift и HTC Vive предоставят завладяващи изживявания за игри и професионални приложения.</p>
+                            </div>
+
+                            <!-- Технология 2 -->
+                            <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                                <div class="text-blue-600 text-3xl mb-4">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Умни Асистенти</h3>
+                                <p class="text-gray-600">Устройства като Amazon Echo и Google Home комбинират вход и изход за гласово контролирано изчисление.</p>
+                            </div>
+
+                            <!-- Технология 3 -->
+                            <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                                <div class="text-blue-600 text-3xl mb-4">
+                                    <i class="fas fa-hand-paper"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Контрол с Жестове</h3>
+                                <p class="text-gray-600">Устройства като Leap Motion и Microsoft Kinect позволяват контрол чрез ръчни жестове и движения на тялото.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#home" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all inline-block">Обратно към Началото</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Футър -->
+    <footer class="tech-gradient text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-microchip text-2xl"></i>
+                        <span class="font-semibold text-xl">Технологична Еволюция</span>
+                    </div>
+                    <p class="mt-2 text-blue-100">Изследване на миналото, настоящето и бъдещето на технологиите.</p>
+                </div>
+                <div class="text-blue-100">
+                    © <span id="currentYear"></span> Технологична Еволюция. Всички права запазени.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page');
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const currentYearSpan = document.getElementById('currentYear');
+
+            if (currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
+
+            // --- Mobile Menu Toggle ---
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+            }
+
+            function navigateToSection(targetId) {
+                // 1. Hide all pages and remove 'active' class from them
+                pages.forEach(page => {
+                    page.classList.add('hidden');
+                    page.classList.remove('active');
+                });
+
+                // 2. Show the target page and add 'active' class to it
+                const targetPage = document.querySelector(targetId);
+                if (targetPage) {
+                    targetPage.classList.remove('hidden');
+                    targetPage.classList.add('active');
+
+                    // 5. Scroll to the section
+                    // Using a slight offset if nav is sticky
+                    const navHeight = document.querySelector('nav').offsetHeight || 0;
+                    const targetPageTop = targetPage.getBoundingClientRect().top + window.pageYOffset - navHeight - 20; // 20px buffer
+                    window.scrollTo({ top: targetPageTop, behavior: 'smooth' });
+                }
+
+                // 3. Update active state for navigation links
+                navLinks.forEach(navLink => {
+                    navLink.classList.remove('active');
+                });
+                document.querySelectorAll(`.nav-link[href="${targetId}"]`).forEach(activeLink => {
+                    activeLink.classList.add('active');
+                });
+
+                // 4. If mobile menu is open and a link is clicked, close it
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon && icon.classList.contains('fa-times')) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            }
+
+            // --- Navigation Link Click Handler ---
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default anchor jump
+                    const targetId = this.getAttribute('href'); // e.g., "#history"
+                    navigateToSection(targetId);
+                     // Update URL hash without jumping
+                    if (history.pushState) {
+                        history.pushState(null, null, targetId);
+                    } else {
+                        window.location.hash = targetId;
+                    }
+                });
+            });
+
+            // Handle "Научете повече" and other in-page links that point to sections
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                if (!anchor.classList.contains('nav-link')) { // Only for non-nav-links
+                    anchor.addEventListener('click', function (e) {
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+
+                        if (targetElement && targetElement.classList.contains('page')) {
+                            e.preventDefault();
+                            navigateToSection(targetId);
+                            // Update URL hash without jumping
+                            if (history.pushState) {
+                                history.pushState(null, null, targetId);
+                            } else {
+                                window.location.hash = targetId;
+                            }
+                        }
+                        // If it's an anchor to something not a .page, let default behavior happen or scroll
+                        // else if (targetElement) { // If you want smooth scroll for other anchors
+                        //      e.preventDefault();
+                        //      targetElement.scrollIntoView({ behavior: 'smooth' });
+                        // }
+                    });
+                }
+            });
+
+            // Activate the correct section based on URL hash on page load
+            function handlePageLoadHash() {
+                const currentHash = window.location.hash;
+                if (currentHash) {
+                    const targetPage = document.querySelector(currentHash);
+                    if (targetPage && targetPage.classList.contains('page')) {
+                        navigateToSection(currentHash);
+                    } else {
+                        // If hash doesn't match a page, default to #home
+                        navigateToSection("#home");
+                    }
+                } else {
+                     // Default to #home if no hash
+                    navigateToSection("#home");
+                }
+            }
+
+            handlePageLoadHash();
+
+            // Listen for hash changes (e.g., browser back/forward buttons)
+            window.addEventListener('hashchange', handlePageLoadHash, false);
+
+        });
+    </script>
+</body>
+</html>
